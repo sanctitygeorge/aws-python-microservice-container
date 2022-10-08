@@ -1,3 +1,5 @@
+[![Python application test with Github Actions](https://github.com/sanctitygeorge/aws-python-microservice-container/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/sanctitygeorge/aws-python-microservice-container/actions/workflows/pythonapp.yml)
+
 This is an AWS DevOps deployment project using Python Microservice
 
 ## Scaffold

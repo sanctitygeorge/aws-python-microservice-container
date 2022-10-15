@@ -9,7 +9,7 @@ This is an AWS DevOps deployment project using Python Microservice
 
 ## Scaffold
 
-1. Create a Python Virtual Environment 'python3 -m venv ~/.venv' or 'virtualenv ~/.venv'
+1. Create a Python Virtual Environment `python3 -m venv ~/.venv' or 'virtualenv ~/.venv`
 2. Create empty files: 'Makefile', 'requirements.txt', 'main.py', 'Dockerfile', 'mylib/__init__.py'
 3. Populate Makefile
 4. Setup Continuous Integration, i.e. check code for issues like lint errors
@@ -19,7 +19,7 @@ This is an AWS DevOps deployment project using Python Microservice
 
 1. Setup Github actions for CI whenever there a push to the repository. An example is on the
      
-     '.github/workflows/pythonapp.yml' 
+     `.github/workflows/pythonapp.yml`
  
  Example of a failed action: 
  

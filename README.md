@@ -65,10 +65,10 @@ After the microservice is deployed to dockerhub, we also deployed the applicatio
 
 3. Run the following commands which can alo be found in the 'Makefile' of this repository:
 
-       `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR Address or name>`
-	   `docker build -t <ecr repository name>.`
-	   `docker tag <ecr repository name>':[tag] <ECR Address or name>/<ecr repository name>:[tag]`
-	   `docker push <ECR Address or name>/<ecr repository name>':[tag]`
+       aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR Address or name>
+	   docker build -t <ecr repository name>.
+	   docker tag <ecr repository name>':[tag] <ECR Address or name>/<ecr repository name>:[tag]
+	   docker push <ECR Address or name>/<ecr repository name>':[tag]
 
 If you have clone this repoitory, you can just run the 'Make deploy' command from the CLI and the microservice container will be deployed to ECR. 
 

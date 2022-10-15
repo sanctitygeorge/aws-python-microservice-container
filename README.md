@@ -10,10 +10,10 @@ This is an AWS DevOps deployment project using Python Microservice
 ## Scaffold
 
 1. Create a Python Virtual Environment `python3 -m venv ~/.venv' or 'virtualenv ~/.venv`
-2. Create empty files: 'Makefile', 'requirements.txt', 'main.py', 'Dockerfile', 'mylib/__init__.py'
+2. Create empty files: `Makefile`, `requirements.txt`, `main.py`, `Dockerfile`, `mylib/__init__.py`
 3. Populate Makefile
 4. Setup Continuous Integration, i.e. check code for issues like lint errors
-5. Build cli using Python Fire library './cli-fire.py --help' to test logic'
+5. Build cli using Python Fire library `./cli-fire.py --help' to test logic`
 
 ## Continuous Integration
 
@@ -38,11 +38,11 @@ Note: You need to have a docker account to be able to containerized your applica
 
 3. Execute the build command to build a containarized application
       
-      'docker build -t <image name> .'
+      `docker build -t <image name> .`
 
 4. Run the python app in Docker Container as below:
  
- 'docker run -p 127.0.0.1:8080:8080 <Dockerimage ID>'
+ `docker run -p 127.0.0.1:8080:8080 <Dockerimage ID>`
 
 5. Test the application 
 
@@ -50,12 +50,12 @@ Note: You need to have a docker account to be able to containerized your applica
 
 To push the container to docker hub, you need to name your local images using one of these methods:
 
-When you build them, using 'docker build -t <hub-user>/<repo-name>[:<tag>]'
-By re-tagging an existing local image 'docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]'
-By using 'docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]' to commit changes
+When you build them, using `docker build -t <hub-user>/<repo-name>[:<tag>]`
+By re-tagging an existing local image `docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]`
+By using `docker commit <existing-container> <hub-user>/<repo-name>[:<tag>]` to commit changes
 Now you can push this repository to the registry designated by its name or tag using the command.
 
- 'docker push <hub-user>/<repo-name>:<tag>'
+ `docker push <hub-user>/<repo-name>:<tag>`
 
 ## Continous Delivery of Contanerized Paas Microservice
 
@@ -67,10 +67,10 @@ After the microservice is deployed to dockerhub, we also deployed the applicatio
 
 3. Run the following commands which can alo be found in the 'Makefile' of this repository:
 
-       'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR Address or name>'
-	   'docker build -t <ecr repository name>.'
-	   'docker tag <ecr repository name>':[tag] <ECR Address or name>/<ecr repository name>:[tag]'
-	   'docker push <ECR Address or name>/<ecr repository name>':[tag]'
+       `aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR Address or name>`
+	   `docker build -t <ecr repository name>.`
+	   `docker tag <ecr repository name>':[tag] <ECR Address or name>/<ecr repository name>:[tag]`
+	   `docker push <ECR Address or name>/<ecr repository name>':[tag]`
 
 If you have clone this repoitory, you can just run the 'Make deploy' command from the CLI and the microservice container will be deployed to ECR. 
 

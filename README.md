@@ -11,7 +11,7 @@ The main aim of this project is to operationalize a Python App from a foundation
 2. Create empty files: `Makefile`, `requirements.txt`, `main.py`, `Dockerfile`, `mylib/__init__.py`
 3. Populate Makefile
 4. Setup Continuous Integration, i.e. check code for issues like lint errors
-5. Build cli using Python Fire library `./cli-fire.py --help' to test logic`
+5. Build cli using Python Fire library `./cli-fire.py --help` to test logic
 
 You can clone the repository here: https://github.com/sanctitygeorge/aws-python-microservice-container
 
@@ -61,7 +61,7 @@ Now you can push this repository to the registry designated by its name or tag u
 
 After the microservice is deployed to dockerhub, we also deployed the application to AWS Elastic Container Registry (ECR) for future use by developers. We need to do the following: 
 
-1. Create a programatic IAM User with access key and secret in the console or create a normal user with username and password. Ensure you assign an adminstrator role/policy to this user
+1. Create a programmatic IAM User with access key and secret in the console or create a normal user with username and password. Ensure you assign an adminstrator role/policy to this user
 
 2. Create a new ECR in the AWS console and copy the name for future use. 
 
@@ -72,9 +72,12 @@ After the microservice is deployed to dockerhub, we also deployed the applicatio
 	   docker tag <ecr repository name>':[tag] <ECR Address or name>/<ecr repository name>:[tag]
 	   docker push <ECR Address or name>/<ecr repository name>':[tag]
 
-If you have clone this repoitory, you can just run the 'Make deploy' command from the CLI and the microservice container will be deployed to ECR. 
+Example of a successful deployment: 
 
 ![image](https://user-images.githubusercontent.com/40411079/195979104-55720dad-415b-4b71-bb55-264e1b4a8389.png)
 
 
-Note: To avoid accrued credits on your accouunt, ensure you delete all the AWS created for this project after successfully testing all the components of the code. 
+If you have cloned this repository, you can just run the 'Make deploy' command from the CLI and the microservice container will be deployed to ECR.
+(Note: ensure you replace your own details in the code, like the container image name or ID, repository name, password, etc.)
+
+Remember that AWS charges you for everything that’s running on your account, so when you’re done with this project, ensure you delete all the AWS resources created for this project after successfully testing all the components of the code.

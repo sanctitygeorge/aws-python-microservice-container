@@ -17,7 +17,14 @@ This is an AWS DevOps deployment project using Python Microservice
 
 ## Continuous Integration
 
-1. Setup Github actions for CI whenever there a push to the repository. An example is on the '.github/workflows/pythonapp.yml' 
+1. Setup Github actions for CI whenever there a push to the repository. An example is on the
+     
+     '.github/workflows/pythonapp.yml' 
+ 
+ Example of a failed action: 
+ 
+      ![image](https://user-images.githubusercontent.com/40411079/195979030-815cebf8-ae33-4a2d-bae1-05d2e1c803d0.png)
+
 
 ## Deploy to Docker Desktop
 
@@ -30,10 +37,12 @@ Note: You need to have a docker account to be able to containerized your applica
 2. Create a Docker File to specify the working directory of the fast-api microservice application and the ports
 
 3. Execute the build command to build a containarized application
+      
       'docker build -t <image name> .'
 
 4. Run the python app in Docker Container as below:
-  'docker run -p 127.0.0.1:8080:8080 <Dockerimage ID>'
+ 
+ 'docker run -p 127.0.0.1:8080:8080 <Dockerimage ID>'
 
 5. Test the application 
 
@@ -53,14 +62,19 @@ Now you can push this repository to the registry designated by its name or tag u
 After the microservice is deployed to dockerhub, we also deployed the application to AWS Elastic Container Registry (ECR) for future use by developers. We need to do the following: 
 
 1. Create a programatic IAM User with access key and secret in the console or create a normal user with username and password. Ensure you assign an adminstrator role/policy to this user
+
 2. Create a new ECR in the AWS console and copy the name for future use. 
+
 3. Run the following commands which can alo be found in the 'Makefile' of this repository:
 
        'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ECR Address or name>'
 	   'docker build -t <ecr repository name>.'
-	   'docker tag <ecr repository name>':[tag]' <ECR Address or name>/<ecr repository name>':[tag]''
+	   'docker tag <ecr repository name>':[tag] <ECR Address or name>/<ecr repository name>:[tag]'
 	   'docker push <ECR Address or name>/<ecr repository name>':[tag]'
 
 If you have clone this repoitory, you can just run the 'Make deploy' command from the CLI and the microservice container will be deployed to ECR. 
+
+![image](https://user-images.githubusercontent.com/40411079/195979104-55720dad-415b-4b71-bb55-264e1b4a8389.png)
+
 
 Note: To avoid accrued credits on your accouunt, ensure you delete all the AWS created for this project after successfully testing all the components of the code. 

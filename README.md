@@ -55,7 +55,7 @@ Now you can push this repository to the registry designated by its name or tag u
 
  `docker push <hub-user>/<repo-name>:<tag>`
 
-## Continous Delivery of Contanerized Paas Microservice
+## Continous Delivery of Containerized Paas Microservice
 
 After the microservice is deployed to dockerhub, we also deployed the application to AWS Elastic Container Registry (ECR) for future use by developers. We need to do the following: 
 

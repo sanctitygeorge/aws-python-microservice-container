@@ -13,6 +13,8 @@ The main aim of this project is to operationalize a Python App from a foundation
 4. Setup Continuous Integration, i.e. check code for issues like lint errors
 5. Build cli using Python Fire library `./cli-fire.py --help' to test logic`
 
+You can clone the repository here: https://github.com/sanctitygeorge/aws-python-microservice-container
+
 ## Continuous Integration
 
 1. Setup Github actions for CI whenever there a push to the repository. An example is on the

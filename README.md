@@ -5,8 +5,6 @@
 The main aim of this project is to operationalize a Python App from a foundational basis. This simple app uses the fast-api to produce Wikipedia results for any key phrase. This project could be extended to any other type of APIs microoservices, machine learning model like prediction
 
 
-This is an AWS DevOps deployment project using Python Microservice
-
 ## Scaffold
 
 1. Create a Python Virtual Environment `python3 -m venv ~/.venv' or 'virtualenv ~/.venv`
